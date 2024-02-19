@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="`VPI` project page">
+  <meta property="og:title" content="Visual Preference Inference: An Image Sequence-Based Preference Reasoning in Tabletop Object Manipulation"/>
+  <meta property="og:description" content="details about the paper `VPI`"/>
+  <meta property="og:url" content="https://joonhyung-lee.github.io/vpi/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="assets/images/fig-overview.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="assets/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Visual Preference Inference: An Image Sequence-Based Preference Reasoning in Tabletop Object Manipulation</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/rilab.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="assets/js/fontawesome.all.min.js"></script>
+  <script src="assets/js/bulma-carousel.min.js"></script>
+  <script src="assets/js/bulma-slider.min.js"></script>
+  <script src="assets/js/index.js"></script>
+
+  <!-- Include MathJax Library -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+  <!-- MathJax Configuration -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['$$', '$$']],
+        processEscapes: true,
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] },
+      showMathMenu: false,
+    });
+  </script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Visual Preference Inference: An Image Sequence-Based Preference Reasoning in Tabletop Object Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://joonhyung-lee.github.io/" target="_blank">Joonhyung Lee</a><sup>1</sup>,  
+                <span class="author-block">
+                  <a href="https://park-sangbeom.github.io/" target="_blank">Sangbeom Park</a><sup>1</sup>,  
+                  <span class="author-block">Yongin Kwon</a><sup>2</sup>,  
+                  </div>
+                  <div class="is-size-5 publication-authors">
+
+                    <span class="author-block">
+                        Jemin Lee</a><sup>2</sup>,  
+                        <span class="author-block">
+                          Minwook Ahn</a><sup>3</sup>,  
+                          <span class="author-block">
+                          <a href="https://sites.google.com/view/sungjoon-choi/home?authuser=0" target="_blank">Sungjoon Choi</a><sup>1</sup>
+                    </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors" style="text-align: center;">
+                    <span class="author-block">Korea University<sup>1</sup><br></span>, 
+                    <span class="author-block">ETRI<sup>2</sup><br></span>, 
+                    <span class="author-block">Neubla<sup>3</sup><br></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2309.13937" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="assets/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/joonhyung-lee/vpi" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+
+                <!-- Video Link -->
+                <span class="link-block">
+                  <a href="https://github.com/joonhyung-lee/vpi" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="assets/videos/SPOTS_final_s4.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle" style="text-align: left;">
+        <span style="font-weight: bold; font-size: larger">SPOTS</span>
+        is an approach to a semi-autonomous teleoperation framework that focuses on verifying placement positions with 1) a <span style="font-weight: bold;">Stability Verification</span> (i.e., physics-based simulation) step and 
+        2) <span style="font-weight: bold;">Receptacle Reasoning</span> (i.e., common knowledge) step by utilizing LLMs that understand scene contexts and reason about the corresponding task without learning.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Understanding user's preferences from raw observations is a key component in achieving personalized AI assistants.
+            This paper introduces Visual Preference Inference (VPI), which is a problem of inferring underlying human preferences from a sequence of raw visual observations without human annotations.
+            To address this problem, we present a \textit{chain-of-visual-residuals} prompting method, which first extracts textual information that describes the difference between the consecutive images, referred to as a visual residual, and incorporates such texts with a sequence of images to infer the user's preference. 
+            Specifically, we increase the reasoning capabilities of the MLLM by explicitly annotating each visual difference rather than utilizing the raw image sequences.
+            We evaluate the performance of our approach for predicting the user's preferences in tabletop object manipulation tasks.
+            Our method outperforms baseline methods in terms of extracting human preferences from visual sequences in both simulation and real-world environments.
+            To the best of our knowledge, this is the first attempt to extract human preferences solely from visual information in manipulation tasks. 
+            <!-- Code, data, and details are available at: <a href="https://joonhyung-lee.github.io/vpi/" target="_blank">https://joonhyung-lee.github.io/vpi/</a> -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Framework Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Framework</h2>
+      <div id="framework" style="text-align: center;">
+          <img src="assets/images/fig-overview.png" alt="MY ALT TEXT" width="62.5%"/>
+          <h2 class="content has-text-justified" style="text-align: left;">
+            <span style="font-weight: bold;">Overview of Chain-of-Visual-Residuals:</span> This approach involves generating geometric relationships for consecutive images and then chaining these relationships to interpret preferences from the scene sequences.
+          </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Framework Overview -->
+
+<!-- Module Explanations -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">\( \textbf{VPI} \)</h2>
+      <div id="framework" style="text-align: center;">
+        <img src="assets/images/fig-task.png" alt="MY ALT TEXT" width="50%"/>
+        <h2 class="content has-text-justified" style="text-align: left;">
+          <span style="font-weight: bold;">Visual Preference Inference (VPI) Tasks:</span> We define a task of VPI as reasoning user preference based on an image sequence. The task involves a robot identifying and moving the object mentioned in a human instruction to a designated location. To infer the user's preferences, we extract visual residuals from each image in the sequence and link them together to enhance reasoning capability.
+        </h2>
+        <br>
+      </div>
+
+      <div id="module" class="columns">
+        <!-- First Column -->
+        <div class="column is-half">
+          <h2 class="title is-3">Geometric Reasoning Descriptor</h2>
+          <div class="item item-video1">
+            <figure class="video-container">
+              <video poster="" id="video1" autoplay controls muted loop height="100%">
+                <source src="assets/videos/stability_verification.mp4" type="video/mp4">
+              </video>
+              <figcaption class="video-caption">
+                We aim to identify regions where objects can be stably placed over a given interaction time \(T\) in simulation. 
+                More specifically, to determine the robustness of the placement stability, small perturbations are injected after the object has been placed.
+                We define the set of points \( \mathcal{P}_{\text{s}} \) to represent coordinates where objects can be placed stably.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Second Column -->
+        <div class="column is-half">
+          <h2 class="title is-3">Preference Reasoning Descriptor</h2>
+          <div class="item item-video1">
+            <figure class="video-container">
+              <video poster="" id="video1" autoplay controls muted loop height="100%">
+                <source src="assets/videos/receptacle_reasoning.mp4" type="video/mp4">
+              </video>
+              <figcaption class="video-caption">
+                Though the set of \( \mathcal{P}_{\text{s}} \) points, that are verified in \( \textbf{Stability Verification} \) step, the points are determined to be feasible, it may contain some options that do not consider the context of the scene. 
+                Therefore, we aim to analyze the reasonableness within the limited range of \( \mathcal{P}_{\text{s}} \) that corresponds to the current scene's situation and context.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+  </div>
+</section>
+<!-- End of module explanations -->
+
+
+<!-- Simulation Experimental Videos -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">User Interaction</h2>
+      <div id="module">
+        <div id="sim-results" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="assets/videos/sim-shelf-level1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="assets/videos/sim-shelf-level2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="assets/videos/sim-shelf-level3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End of simulation experimental videos -->
+
+<!-- User Interaction Videos -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">User Interaction</h2>
+      <div id="module">
+        <div id="sim-results">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="assets/videos/user_interaction.mp4" type="video/mp4">
+          </video>
+          <h2 class="content has-text-justified" style="text-align: left;">
+            User interaction with the proposed system SPOTS. The user selects among the candidates, provided with a close consideration of stability and reasonableness, in an interactive viewer. SPOTS recommends the placement candidates based on the prompt of the task.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of user interaction videos -->
+
+<!-- Environments -->
+<section class="section" style="margin-bottom: 120px;">
+
+  <div class="container">
+    <h2 class="title is-3">Environments</h2>
+    <h2 class="content has-text-justified" style="text-align: left; position: absolute;">
+      <p>
+        Our real-to-sim transfer module, illustrated in 
+        <a href="#framework">Framework</a>, 
+        utilizes OWL-ViT for open-vocabulary object detection 
+        and AprilTags for pose estimation, based on input 
+        from an RGBD vision sensor.
+        The detected objects form a label super-set that includes nine categories of
+        <a href="#footnote-text"><span id="footnote1">[1]</span></a>,
+        for a total of 21 object assets. For each detected object, we assume the corresponding 3D asset is available.
+        These assets are transferred into a simulation environment that mimics the real world as closely as possible. 
+        This reconstructed environment is the basis for all subsequent evaluations.
+        The framework is built on the 
+        MuJoCo simulator, using assets from the YCB and Google Scanned dataset.
+        We use a tabletop manipulation framework with a 6-DoF robot arm and gpt-3.5-turbo.
+      </p>
+    </h2>
+    <div class="footnote" style="text-align: left; position: absolute; top: 200px;">
+      <p id="footnote-text"><a href="#footnote1">[1]</a> 'DishRack', 'Bowl', 'BookShelf', 'Fruit', 'Beverage', 'Snack', 'Tray', 'Glass', 'Book'</p>
+    </div>
+
+    <!-- Placeholder -->
+    <div class="row border rounded" style="padding-top: 12px; padding-bottom: 12px;">
+      <div class="col-md-6 mx-auto text-center">
+        <video id="demo-video-1" style="padding-top: 200px; border-radius: 5px; max-width: 75%; display: block; margin: 0 auto;" autoplay loop muted webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">
+          <source id="expandedImg-1" src="assets/videos/placeholder_below.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="col-md-6 mx-auto text-center" style="text-align: center;">
+      <div id="imgtext-1" style="font-size: 1.5em; display: inline-block; margin: 0 auto;">
+        <span style="background-color: #FFFFCC; color: #333; padding: 2px 4px;">Select an image below:</span>
+      </div>
+    </div>
+        
+
+    <!-- First Row -->
+    <div class="columns">
+      <!-- Column 1 -->
+      <div class="column is-one-third">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-kitchen-white.png" alt="[Small Gap]: White Dish Rack" style="width: 65%;" onclick="populateDemo(this, 1);">
+          <figcaption style="position: absolute; bottom: -15%; left: 50%; transform: translateX(-50%); font-size: 1.25em; background-color: rgba(255, 255, 255, 0.6);"> (a) Small Gap </figcaption>
+        </figure>
+      </div>
+      <!-- Column 2 -->
+      <div class="column is-one-third">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-kitchen-black.png" alt="[Medium Gap]: Black Dish Rack" style="width: 65%; transform: translateY(10%)" onclick="populateDemo(this, 1);">
+          <figcaption style="position: absolute; bottom: -32.5%; left: 50%; transform: translateX(-50%); font-size: 1.25em; background-color: rgba(255, 255, 255, 0.6);"> (b) Medium Gap </figcaption>
+        </figure>
+      </div>
+      <!-- Column 3 -->
+      <div class="column is-one-third">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-kitchen-small.png" alt="[Large Gap]: Wood Dish Rack" style="width: 55%; transform: translateY(15%)" onclick="populateDemo(this, 1);">
+          <figcaption style="position: absolute; bottom: -37.5%; left: 50%; transform: translateX(-50%); font-size: 1.25em; background-color: rgba(255, 255, 255, 0.6);"> (c) Large Gap </figcaption>
+        </figure>
+      </div>
+    </div>
+    
+    <!-- Second Row -->
+    <div class="columns">
+      <!-- Column 4 -->
+      <div class="column is-one-third align-bottom">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-bookshelf-two-tiered.png" alt="[Two-Tiered Bookshelf]" style="width: 65%; transform: translateY(45%)" onclick="populateDemo(this, 1);">
+          <figcaption style="position: absolute; bottom: -60%; left: 50%; transform: translateX(-50%); font-size: 1.25em; white-space: nowrap; background-color: rgba(255, 255, 255, 0.6);"> (d) Two-Tiered Bookshelf </figcaption>
+        </figure>
+      </div>
+      <!-- Column 5 -->
+      <div class="column is-one-third align-bottom">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-bookshelf-three-tiered.png" alt="[Three-Tiered Bookshelf]" style="width: 65%; transform: translateY(15%)" onclick="populateDemo(this, 1);"> 
+          <figcaption style="position: absolute; bottom: -27.5%; left: 50%; transform: translateX(-50%); font-size: 1.25em; white-space: nowrap; background-color: rgba(255, 255, 255, 0.6);"> (e) Three-Tiered Bookshelf </figcaption>
+        </figure>
+      </div>
+      <!-- Column 6 -->
+      <div class="column is-one-third align-bottom">
+        <figure class="image" style="position: relative; display: flex; align-items: center; justify-content: center;">
+          <img src="assets/videos/scene-shelf-three-tiered.png" alt="[Three-Tiered Shelf]" style="width: 65%; transform: translateY(15%)" onclick="populateDemo(this, 1);">
+          <figcaption style="position: absolute; bottom: -25%; left: 50%; transform: translateX(-50%); font-size: 1.25em; white-space: nowrap; background-color: rgba(255, 255, 255, 0.6);"> (f) Three-Tiered Shelf </figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End environments -->
+
+<!-- Results -->
+<section class="hero is-small" style="margin-bottom: 35px;">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results</h2>
+      <div id="Results">        
+        <img src="assets/images/fig_stability_check.png" alt="MY ALT TEXT" style="width: 100%;">
+        <h2 class="content has-text-justified" style="text-align: left;">
+          Result of stability verification module: Performed for all environments in our experiments, not including reasoning module. The ratio of stable coordinates to the total number of coordinates is very low. This indicates that the task we are assuming is physically difficult to be stably located.
+        </h2>
+
+        <img src="assets/images/fig_sim.png" alt="MY ALT TEXT" style="width: 100%;">
+          <p style="margin-bottom: 8px;">
+            We compare <strong>SPOTS</strong> to three prior methods: 
+            <strong>LLM-GROP</strong><a href="#footnote-llmgrop"> [1]</a>, 
+            <strong>Code-as-Policies (CaP)</strong><a href="#footnote-cap"> [2]</a>, 
+            and <strong>Language-to-Reward (L2R)</strong><a href="#footnote-l2r"> [3]</a>. 
+            <strong>LLM-GROP</strong> uses two different template-based prompts; one extracts semantic relationships with examples, and the other one predicts geometric spatial relationships for varying scene geometry. 
+            <strong>CaP</strong> generates policy code for the robot motion using a pre-defined low-level primitive function. 
+            <strong>L2R</strong> defines reward parameters that can be optimized, and the reward function is designed for moving a manipulator to a parameterized placement position.
+          </p>
+          <p style="margin-bottom: 8px;">
+            Our evaluation metrics are the place stability and reasonableness of the suggested object placements. 
+            The stability success rate is based purely on the physical stability of object placement in simulations, whether that object is placed stable (i.e., Sta. S/R). 
+            Reasonableness success rate (i.e., Rea. S/R), on the other hand, is based on whether object placement aligns with the ground truth that we define. Evaluating reasonableness success criteria is manually designed.
+            These metrics assess the overall effectiveness of placements in ensuring both stability and reasonableness.
+            These specific criteria are the ground truth for confirming appropriate locations in our experimental validation.
+            Furthermore, we measure the time taken for the inference and the number of input and output tokens to measure the efficiency of utilizing LLMs. 
+          </p>
+          <p style="margin-bottom: 8px;">
+            By separating the tasks of predicting receptacles and ensuring physical robustness into two distinct modules, we find that <strong>SPOTS</strong> achieves a higher success rate while using fewer tokens compared to the methods that enforce LLMs to predict both robotic plans while understanding the context.
+            From this experiment, we would like to posit that <strong>SPOTS</strong> has great capability of promptable placement tasks, which considers both physically stable and reasonable regions, and <strong>SPOTS</strong> has a good distribution, where reasonable positions can be sampled.
+          </p>
+          </div>
+        <!-- Footnotes -->
+        <div class="footnotes" style="text-align: left;">
+          <p id="footnote-llmgrop"><a href="#footnote-llmgrop">[1]</a> <a href="https://sites.google.com/view/llm-grop" target="_blank">Task and Motion Planning with Large Language Models for Object Rearrangement</a></p>
+          <p id="footnote-cap"><a href="#footnote-cap">[2]</a> <a href="https://code-as-policies.github.io/" target="_blank">Code as Policies: Language Model Programs for Embodied Control</a></p>
+          <p id="footnote-l2r"><a href="#footnote-l2r">[3]</a> <a href="https://language-to-reward.github.io/" target="_blank">Language to Rewards for Robotic Skill Synthesis</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Results -->
+
+
+<!-- Real world Experimental Videos -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Real World Demonstration</h2>
+      <div id="module">
+        <div id="realworld">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="assets/videos/real_world.mp4" type="video/mp4">
+          </video>
+          <h2 class="content has-text-justified" style="text-align: left;">
+            In this experiment, we consider a scene with different objects placed on a desk. 
+            We designed a task that categorizes objects based on similarity. The reasoning criteria, termed <strong>similarity</strong>, varies for each experiment and serves as the ground truth for evaluating reasoning abilities.
+            Each type of <strong>similarity</strong> was evaluated five times, and performance was measured using the overall success rate (i.e., both Sta. S/R and Rea. S/R).
+            From this experiment, we insist that the reasonable place varies depending on the task description given as input. Furthermore, we are able to accurately determine the stable positions to place the objects by reconstructing the robot's ego-centric view with the real-to-sim method.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of Real world experimental videos -->
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="assets/pdfs/SPOTS_v6.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        <!-- @article{lee2023spots,
+          title={SPOTS: Stable Placement of Objects with Reasoning in Semi-Autonomous Teleoperation Systems},
+          author={Lee, Joonhyung and Park, Sangbeom and Park, Jeongeun and Lee, Kyungjae and Choi, Sungjoon},
+          journal={arXiv preprint arXiv:2309.13937},
+          year={2023}
+        } -->
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+<script>
+
+  timeoutIds = [];
+
+  function populateDemo(imgs, num) {
+      // Get the expanded image
+      var expandImg = document.getElementById("expandedImg-" + num);
+      // Get the image text
+      var imgText = document.getElementById("imgtext-" + num);
+      var answer = document.getElementById("answer-" + num);
+
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg.src = imgs.src.replace(".png", ".mp4");
+      var video = document.getElementById('demo-video-' + num);
+      // or video = $('.video-selector')[0];
+      video.pause()
+      video.load();
+      video.play();
+      video.removeAttribute('controls');
+
+      console.log(expandImg.src);
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      var qa = imgs.alt.split("[sep]");
+      imgText.innerHTML = qa[0];
+      answer.innerHTML = "";
+      // Show the container element (hidden with CSS)
+      expandImg.parentElement.style.display = "block";
+      for (timeoutId of timeoutIds) {
+          clearTimeout(timeoutId);
+      }
+
+      // NOTE (wliang): Modified from original to read from file instead
+      fetch(qa[1])
+          .then(response => response.text())
+          .then(contents => {
+              // Call the processData function and pass the contents as an argument
+              typeWriter(contents, 0, qa[0], num);
+          })
+          .catch(error => console.error('Error reading file:', error));
+  }
+
+  function typeWriter(txt, i, q, num) {
+      var imgText = document.getElementById("imgtext-" + num);
+      var answer = document.getElementById("answer-" + num);
+      if (imgText.innerHTML == q) {
+          for (let k = 0; k < 5; k++) {
+              if (i < txt.length) {
+                  if (txt.charAt(i) == "\\") {
+                      answer.innerHTML += "\n";
+                      i += 1;
+                  } else {
+                      answer.innerHTML += txt.charAt(i);
+                  }
+                  i++;
+              }
+          }
+          hljs.highlightAll();
+          timeoutIds.push(setTimeout(typeWriter, 1, txt, i, q, num));
+      }
+  }
+
+</script>
+</html>
