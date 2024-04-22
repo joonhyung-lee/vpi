@@ -1,0 +1,16 @@
+<mujocoinclude>
+
+    <asset>
+        <texture type="2d" name="light_wood_v2" file="light_wood_v2.png"/>
+        <material name="base_table_mat" texture="light_wood_v2" specular="0.5" shininess="0.5"  rgba="0.5 0.5 0.5 1"/>
+    </asset>
+
+    <worldbody>
+        <body name="base_table" pos="0 0 0.395" euler="0 0 0">
+            <geom name="base_table" size="0.38 0.36 0.395" pos="0 0 0" type="box" material="base_table_mat"/> <!-- rgba="0.73 0.76 0.79 1.0" -->
+            <!-- <geom name="base_table" size="0.38 0.36 0.395" pos="0 0 0.395" type="box" rgba="0.420 0.353 0.325 1.0"/> -->
+            <inertial pos="0 0 0" mass="1" diaginertia="0 0 0" />
+        </body>
+    </worldbody>
+    
+</mujocoinclude>

@@ -1,0 +1,18 @@
+<mujoco model="redbullcan">
+
+  <asset>
+    <texture type="2d" name="redbullcan" file="redbullcan.png"/>
+    <material name="redbullcan_mat" texture="redbullcan" specular="0.5" shininess="0.5"/>
+    <mesh file="redbullcan.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="redbullcan_collision_0.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="redbullcan_collision_1.obj" scale="0.01 0.01 0.01"/>
+  </asset>
+  <worldbody>
+    <body name="redbullcan" pos="1.5 0 2.0" quat="0 0 1 1">
+      <freejoint/>
+      <geom material="redbullcan_mat" mesh="redbullcan" class="visual"/>
+      <geom mesh="redbullcan_collision_0" class="collision"/>
+      <geom mesh="redbullcan_collision_1" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,23 @@
+<mujoco model="kitkat_box">
+  <default>
+    <default class="kitkat_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="kitkat_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="kitkat_box" file="kitkat_box.png"/>
+    <material name="kitkat_box" texture="kitkat_box" specular="1.0" shininess="0.0"/>
+    <mesh file="kitkat_box.obj" scale="0.003 0.003 0.003"/>
+    <mesh file="kitkat_box_collision_0.obj" scale="0.003 0.003 0.003"/>
+  </asset>
+  <worldbody>
+    <body name="kitkat_box" pos="1.5 0 2.5" euler="0 1.57 0">
+      <joint name="kitkat_box_joint" type="free"/>
+      <geom material="kitkat_box" mesh="kitkat_box" class="kitkat_visual"/>
+      <geom mesh="kitkat_box_collision_0" class="kitkat_collision"/>
+    </body>
+  </worldbody>
+</mujoco>

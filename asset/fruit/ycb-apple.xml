@@ -1,0 +1,23 @@
+<mujoco model="ycb-apple">
+  <asset>
+    <texture type="2d" name="ycb-apple" file="ycb-apple.png"/>
+    <material name="ycb-apple_mat" texture="ycb-apple" specular="0.5" shininess="0.5"/>
+    <mesh file="ycb-apple.obj"/>
+    <mesh file="ycb-apple_collision_0.obj"/>
+  </asset>
+  <worldbody>
+    <body name="ycb-apple" pos="2 2 2">
+      <freejoint/>
+      <geom material="ycb-apple_mat" mesh="ycb-apple" class="visual"/>
+      <!-- <geom mesh="ycb-apple_collision_0" class="collision"/> -->
+      <geom type="box" size="0.03 0.03 0.03" pos="0.0 0.0 0.03" rgba="1.0 0.0 0.0 .0"/>
+    </body>
+
+    <!-- <body name="ycb-apple-2">
+      <freejoint/>
+      <geom material="ycb-apple_mat" mesh="ycb-apple" class="visual"/>
+      <geom type="box" size="0.03 0.03 0.03" pos="0.0 0.0 0.03" rgba="1.0 0.0 0.0 .0"/>
+    </body> -->
+
+  </worldbody>
+</mujoco>

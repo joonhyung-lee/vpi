@@ -1,0 +1,16 @@
+<mujoco model="hershey_cookie">
+  <asset>
+    <texture type="2d" name="hershey_cookie" file="hershey_cookie.png"/>
+    <material name="hershey_cookie_mat" texture="hershey_cookie" specular="1.0" shininess="0.0"/>
+    <mesh file="hershey_cookie.obj" scale="0.05 0.03 0.07"/>
+    <mesh file="hershey_cookie_collision_0.obj" scale="0.05 0.03 0.07"/>
+  </asset>
+  <worldbody>
+    <body name="hershey_cookie" pos="1 -0.3 2 ">
+      <freejoint/>
+      <geom material="hershey_cookie_mat" mesh="hershey_cookie" class="snack_visual"/>
+      <geom name="hershey_geom" type="box" pos="0 0.03 0" size="0.05 0.03 0.072" rgba="0 0 1 0"/>
+      <!-- <geom mesh="hershey_cookie_collision_0" class="collision"/> -->
+    </body>
+  </worldbody>
+</mujoco>

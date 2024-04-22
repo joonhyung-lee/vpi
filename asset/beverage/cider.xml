@@ -1,0 +1,18 @@
+<mujoco model="cider">
+
+  <asset>
+    <texture type="2d" name="cider" file="cider.png"/>
+    <material name="cider_mat" texture="cider" specular="0.5" shininess="0.5"/>
+    <mesh file="cider.obj" scale="0.001 0.001 0.001"/>
+    <mesh file="cider_collision_0.obj" scale="0.001 0.001 0.001"/>
+    <mesh file="cider_collision_1.obj" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <body name="cider" pos="1.0 0 1.0" quat="0.14 -0.96 0.096 -0.22">
+      <freejoint/>
+      <geom material="cider_mat" mesh="cider" class="visual"/>
+      <geom mesh="cider_collision_0" class="collision"/>
+      <geom mesh="cider_collision_1" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

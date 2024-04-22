@@ -1,0 +1,32 @@
+<mujoco model="monster_yellow">
+  <default>
+    <default class="monster_visual">
+      <geom group="2" type="mesh" contype="1" conaffinity="1"/>
+    </default>
+    <default class="monster_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="Monster1_baseColor" file="Monster1_baseColor.png"/>
+    <material name="material_0" texture="Monster1_baseColor" specular="1.0" shininess="1.0"/>
+    <mesh file="monster_yellow.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="monster_yellow_collision_0.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="monster_yellow_collision_1.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="monster_yellow_collision_2.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="monster_yellow_collision_3.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="monster_yellow_collision_4.obj" scale="0.01 0.01 0.01"/>
+  </asset>
+  <worldbody>
+    <body name="monster_yellow" pos="1.2 0 2.0" euler="1.57 1.57 0">
+      <!-- <joint name="monster_yellow_joint" type="free"/> -->
+      <geom material="material_0" mesh="monster_yellow" class="monster_visual"/>
+      <geom mesh="monster_yellow_collision_0" class="monster_collision"/>
+      <geom mesh="monster_yellow_collision_1" class="monster_collision"/>
+      <geom mesh="monster_yellow_collision_2" class="monster_collision"/>
+      <geom mesh="monster_yellow_collision_3" class="monster_collision"/>
+      <geom mesh="monster_yellow_collision_4" class="monster_collision"/>
+      <geom name="monster_yellow_geom" type="cylinder" pos="0 0 0" euler="1.57 0 0" size="0.025 0.08" rgba="1 1 1 0.0"/>
+    </body>
+  </worldbody>
+</mujoco>

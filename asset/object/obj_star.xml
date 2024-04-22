@@ -1,0 +1,78 @@
+<mujoco model="obj_star">
+  <default>
+    <default class="obj_star_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="obj_star_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="obj_star.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_0.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_1.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_2.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_3.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_4.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_5.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_6.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_7.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_8.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_9.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_10.obj" scale="0.005 0.005 0.002"/>
+    <mesh file="obj_star_collision_11.obj" scale="0.005 0.005 0.002"/>
+  </asset>
+
+  <worldbody>
+    <body name="obj_star_green" pos="1.2 0 0.8">
+      <freejoint/>
+      <geom mesh="obj_star" class="obj_star_visual" rgba="0.15 0.65 0.15 1"/>
+      <geom mesh="obj_star_collision_0" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_1" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_2" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_3" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_4" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_5" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_6" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_7" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_8" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_9" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_10" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_11" class="obj_star_collision"/>
+    </body>
+
+    <body name="obj_star_red" pos="1.2 -0.2 0.8">
+      <freejoint/>
+      <geom mesh="obj_star" class="obj_star_visual" rgba="0.65 0.15 0.15 1"/>
+      <geom mesh="obj_star_collision_0" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_1" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_2" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_3" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_4" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_5" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_6" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_7" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_8" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_9" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_10" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_11" class="obj_star_collision"/>
+    </body>
+
+    <body name="obj_star_blue" pos="1.2 0.2 0.8">
+      <freejoint/>
+      <geom mesh="obj_star" class="obj_star_visual" rgba="0.15 0.15 0.65 1"/>
+      <geom mesh="obj_star_collision_0" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_1" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_2" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_3" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_4" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_5" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_6" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_7" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_8" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_9" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_10" class="obj_star_collision"/>
+      <geom mesh="obj_star_collision_11" class="obj_star_collision"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,17 @@
+<mujoco model="orange_can">
+  <asset>
+    <texture type="2d" name="orange_mat" file="orange_mat.png"/>
+    <material name="orange_mat" texture="orange_mat" specular="1.0" shininess="0.0"/>
+    <mesh file="orange_can.obj" scale="0.0003 0.0003 0.0003"/>
+    <mesh file="orange_can_collision_0.obj" scale="0.0003 0.0003 0.0003"/>
+  </asset>
+  <worldbody>
+    <body name="orange_can">
+      <freejoint/>
+      <geom material="orange_mat" mesh="orange_can" class="visual"/>
+      <geom name="orange_can_geom" type="box" pos="-0.18 -0.05 0.02" size="0.01 0.01 0.01" rgba="1 1 1 0.5"/>
+
+      <geom mesh="orange_can_collision_0" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

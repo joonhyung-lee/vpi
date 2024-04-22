@@ -1,0 +1,23 @@
+<mujoco model="ycb-lemon">
+  <asset>
+    <texture type="2d" name="ycb-lemon" file="ycb-lemon.png"/>
+    <material name="ycb-lemon_mat" texture="ycb-lemon" specular="0.5" shininess="0.5"/>
+    <mesh file="ycb-lemon.obj"/>
+    <mesh file="ycb-lemon_collision_0.obj"/>
+  </asset>
+  <worldbody>
+    <body name="ycb-lemon" pos="3 3 3">
+      <freejoint/>
+      <geom material="ycb-lemon_mat" mesh="ycb-lemon" class="visual"/>
+      <!-- <geom mesh="ycb-lemon_collision_0" class="collision"/> -->
+      <geom type="box" size="0.028 0.028 0.025" pos="-0.01175 0.02 0.025" rgba="1.0 0.0 0.0 0."/>
+    </body>
+
+    <!-- <body name="ycb-lemon-2">
+      <freejoint/>
+      <geom material="ycb-lemon_mat" mesh="ycb-lemon" class="visual"/>
+      <geom type="box" size="0.028 0.028 0.025" pos="-0.01175 0.02 0.025" rgba="1.0 0.0 0.0 0."/>
+    </body> -->
+
+  </worldbody>
+</mujoco>

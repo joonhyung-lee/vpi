@@ -1,0 +1,24 @@
+<mujoco model="ycb-banana">
+  <asset>
+    <texture type="2d" name="ycb-banana" file="ycb-banana.png"/>
+    <material name="ycb-banana_mat" texture="ycb-banana" specular="0.5" shininess="0.5"/>
+    <mesh file="ycb-banana.obj"/>
+    <mesh file="ycb-banana_collision_0.obj"/>
+  </asset>
+  <worldbody>
+    <body name="ycb-banana" pos="1.5 1.5 1.5">
+      <freejoint/>
+      <geom material="ycb-banana_mat" mesh="ycb-banana" class="visual"/>
+      <!-- <geom mesh="ycb-banana_collision_0" class="collision"/> -->
+      <geom type="box" euler="0 0 -0.25" size="0.01 0.08 0.015" pos="0.0 0.0 0.013" rgba="1.0 0.0 0.0 0.0"/>
+    </body>
+
+    <body name="ycb-banana-2">
+      <freejoint/>
+      <geom material="ycb-banana_mat" mesh="ycb-banana" class="visual"/>
+      <!-- <geom mesh="ycb-banana_collision_0" class="collision"/> -->
+      <geom type="box" euler="0 0 -0.25" size="0.01 0.08 0.015" pos="0.0 0.0 0.013" rgba="1.0 0.0 0.0 0.0"/>
+    </body>
+    
+  </worldbody>
+</mujoco>

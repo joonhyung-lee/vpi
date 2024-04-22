@@ -1,0 +1,25 @@
+<mujoco model="chocopie">
+  <default>
+    <default class="snack_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="snack_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="chocopie" file="chocopie.png"/>
+    <material name="chocopie_mat" texture="chocopie" specular="1.0" shininess="0.0"/>
+    <mesh file="chocopie.obj" scale="0.005 0.005 0.005"/>
+    <mesh file="chocopie_collision_0.obj" scale="0.005 0.005 0.005"/>
+  </asset>
+  <worldbody>
+    <body name="chocopie" pos="1.2 0 1.5" quat="0 0 1 1">
+      <freejoint/>
+      <geom material="chocopie_mat" mesh="chocopie" class="snack_visual"/>
+      <geom mesh="chocopie_collision_0" class="snack_collision"/>
+      <geom fromto="0.0 0.0 0.014  0.0 0.0 -0.014" size="0.0525 0.0525" type="box" rgba="0.5 0.56 0.43 0" />
+    </body>
+  </worldbody>
+</mujoco>

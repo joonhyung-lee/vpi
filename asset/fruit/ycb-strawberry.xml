@@ -1,0 +1,24 @@
+<mujoco model="ycb-strawberry">
+
+  <asset>
+    <texture type="2d" name="ycb-strawberry" file="ycb-strawberry.png"/>
+    <material name="ycb-strawberry_mat" texture="ycb-strawberry" specular="0.5" shininess="0.5"/>
+    <mesh file="ycb-strawberry.obj"/>
+    <mesh file="ycb-strawberry_collision_0.obj"/>
+    <mesh file="ycb-strawberry_collision_1.obj"/>
+    <mesh file="ycb-strawberry_collision_2.obj"/>
+    <mesh file="ycb-strawberry_collision_3.obj"/>
+    <mesh file="ycb-strawberry_collision_4.obj"/>
+  </asset>
+  <worldbody>
+    <body name="ycb-strawberry">
+      <freejoint/>
+      <geom material="ycb-strawberry_mat" mesh="ycb-strawberry" class="visual"/>
+      <geom mesh="ycb-strawberry_collision_0" class="collision"/>
+      <geom mesh="ycb-strawberry_collision_1" class="collision"/>
+      <geom mesh="ycb-strawberry_collision_2" class="collision"/>
+      <geom mesh="ycb-strawberry_collision_3" class="collision"/>
+      <geom mesh="ycb-strawberry_collision_4" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

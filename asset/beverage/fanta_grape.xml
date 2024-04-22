@@ -1,0 +1,15 @@
+<mujoco model="fanta_grape">
+  <asset>
+    <texture type="2d" name="fanta_grape" file="fanta_grape.png"/>
+    <material name="fanta_grape_mat" texture="fanta_grape" specular="1" shininess="1" rgba="1.0 1.0 1.0 1"/>
+    <mesh file="fanta_grape.obj" scale="0.006 0.008 0.006"/>
+    <mesh file="fanta_grape_collision_0.obj" scale="0.006 0.008 0.006"/>
+  </asset>
+  <worldbody>
+    <body name="fanta_grape" pos="1.5 0 1.5" quat="1 1 0 0">
+      <joint type="free" name="fanta_grape"/>
+      <geom material="fanta_grape_mat" mesh="fanta_grape" class="visual"/>
+      <geom mesh="fanta_grape_collision_0" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

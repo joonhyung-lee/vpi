@@ -1,0 +1,15 @@
+<mujoco model="coke">
+  <asset>
+    <texture type="2d" name="coke" file="coke_red.png"/>
+    <material name="coke_mat" texture="coke" specular="1.25" shininess=".0"/>
+    <mesh file="coke_red.obj"/>
+    <mesh file="coke_red_collision_0.obj"/>
+  </asset>
+  <worldbody>
+  <body name="coke" pos="1.25 0. 0.8" euler="1.57 0 0">
+      <joint name="coke:joint" type="free"/>
+      <geom material="coke_mat" mesh="coke_red" class="visual" rgba="1 1 1 1."/>
+      <geom name="coke_geom" type="box" pos="0 0.01 0" size="0.025 0.01 0.025" rgba="1 1 1 0."/>
+    </body>
+  </worldbody>
+</mujoco>

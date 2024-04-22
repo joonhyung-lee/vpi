@@ -1,0 +1,26 @@
+<mujoco model="pocky">
+  <default>
+    <default class="pocky_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="pocky_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="pocky" file="pocky.png"/>
+    <material name="pocky_mat" texture="pocky" specular="1.0" shininess="1.0"/>
+    <mesh file="pocky.obj"/>
+    <mesh file="pocky_collision_0.obj"/>
+    <mesh file="pocky_collision_1.obj"/>
+  </asset>
+  <worldbody>
+    <body name="pocky" pos="1.5 0 0.9" euler="-1.57 0 1.57">
+      <!-- <freejoint/> -->
+      <geom material="pocky_mat" mesh="pocky" class="pocky_visual"/>
+      <geom mesh="pocky_collision_0" class="pocky_collision"/>
+      <geom mesh="pocky_collision_1" class="pocky_collision"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,61 @@
+<mujocoinclude>
+    <asset>
+        <!-- <mesh name="obj_pentagon" file="obj_pentagon.stl" scale="0.00995 0.00995 0.01"/>
+        <mesh name="obj_triangle" file="obj_triangle.stl" scale="0.000975 0.000975 0.001"/> -->
+
+        <!-- <material name="material_triangle" specular="1.0" shininess="0.0"
+            rgba="0.596078 0.596078 0.596078 1.0" />
+        <mesh file="obj_triangle.obj" scale="0.000975 0.000975 0.001" />
+        <mesh file="obj_triangle_collision_0.obj" scale="0.000975 0.000975 0.001" />
+        <mesh file="obj_triangle_collision_1.obj" scale="0.000975 0.000975 0.001" />
+        <mesh file="obj_triangle_collision_2.obj" scale="0.000975 0.000975 0.001" /> -->
+
+        <!-- <material name="material_pentagon" specular="1.0" shininess="0.0"
+            rgba="0.721569 0.721569 0.721569 1.0" />
+        <mesh file="obj_pentagon.obj" scale="0.00995 0.00995 0.01" />
+        <mesh file="obj_pentagon_collision_0.obj" scale="0.00995 0.00995 0.01" />
+        <mesh file="obj_pentagon_collision_1.obj" scale="0.00995 0.00995 0.01" />
+        <mesh file="obj_pentagon_collision_2.obj" scale="0.00995 0.00995 0.01" /> -->
+    </asset>
+
+    <worldbody>
+        <!-- Square objects -->
+        <body name="obj_box_red" pos="0.0 0.0 1.0">
+            <joint type="free" />
+            <geom name="obj_box_red" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="1 0 0.16 1" />
+        </body>
+        <body name="obj_box_green" pos="0.0 0.00 1.2">
+            <joint type="free" />
+            <geom name="obj_box_green" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="0.36 1 0 1" />
+        </body>
+        <body name="obj_box_blue" pos="0.0 -0.00 1.4">
+            <joint type="free" />
+            <geom name="obj_box_blue" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="0 0.46 1 1" />
+        </body>
+        <body name="obj_box_yellow" pos="0.0 0.0 1.0">
+            <joint type="free" />
+            <geom name="obj_box_yellow" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="1 1 0.16 1" />
+        </body>
+        <!-- <body name="obj_box_cyan" pos="0.0 0.00 1.2">
+            <joint type="free" />
+            <geom name="obj_box_cyan" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="0.16 1 1 1" />
+        </body> -->
+        <body name="obj_box_gray" pos="2.0 0.00 1.2">
+            <joint type="free" />
+            <geom name="obj_box_gray" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="0.32 0.32 0.32 1" />
+        </body>
+
+        <body name="obj_box_magenta" pos="0.0 -0.00 1.4">
+            <joint type="free" />
+            <geom name="obj_box_magenta" fromto="0.0 0.0 0.06  0.0 0.0 0.0" size="0.03 0.03"
+                density="500" friction="1 0.005 0.0001" type="box" rgba="1 0.16 1 1" />
+        </body>
+    </worldbody>
+
+</mujocoinclude>

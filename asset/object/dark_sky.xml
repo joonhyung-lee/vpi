@@ -1,0 +1,24 @@
+<mujocoinclude>
+    
+    <!-- Haze -->
+    <visual>
+        <!-- <headlight diffuse="0.1 0.1 0.1" ambient="0.1 0.1 0.1" specular="0 0 0" /> -->
+        <headlight diffuse="0.9 0.9 0.9" ambient="0.1 0.1 0.1" specular="0 0 0" />
+        <global azimuth="90" elevation="-60" />
+    </visual>
+
+    <!-- Asset -->
+    <asset>
+        <!-- Sky -->
+        <texture type="skybox" builtin="flat" rgb1="0.9 0.9 0.9" rgb2="0 0 0" width="512"
+            height="3072" />
+    </asset>
+
+    <!-- Light and floor -->
+    <worldbody>
+        <light pos="0 0 3" dir="0 0 -1" directional="true" diffuse="1 1 1"/>
+        <!-- <light pos="0 0 3" dir="0 0 -1" directional="true" diffuse="0.75 0.75 0.75"/> -->
+        <!-- <light pos="3 0 0" dir="-1 0 0" directional="true" diffuse="1 1 1"/> -->
+    </worldbody>
+
+</mujocoinclude>

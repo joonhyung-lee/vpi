@@ -1,0 +1,31 @@
+<mujoco model="kitkat_flat">
+  <default>
+    <default class="kitkat_flat_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="kitkat_flat_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="kitkat_flat" file="kitkat_flat.png"/>
+    <material name="kitkat_flat" texture="kitkat_flat" specular="1.0" shininess="0.0"/>
+    <mesh file="kitkat_flat.obj" scale="0.075 0.075 0.075"/>
+    <mesh file="kitkat_flat_collision_0.obj" scale="0.075 0.075 0.075"/>
+    <mesh file="kitkat_flat_collision_1.obj" scale="0.075 0.075 0.075"/>
+    <mesh file="kitkat_flat_collision_2.obj" scale="0.075 0.075 0.075"/>
+    <mesh file="kitkat_flat_collision_3.obj" scale="0.075 0.075 0.075"/>
+    <mesh file="kitkat_flat_collision_4.obj" scale="0.075 0.075 0.075"/>
+  </asset>
+  <worldbody>
+    <body name="kitkat_flat" pos="-1.5 -0.5 1.5" euler="1.57 0 -1.57">
+      <joint name="kitkat_flat_joint" type="free"/>
+      <geom material="kitkat_flat" mesh="kitkat_flat" class="kitkat_flat_visual"/>
+      <geom mesh="kitkat_flat_collision_0" class="kitkat_flat_collision"/>
+      <geom mesh="kitkat_flat_collision_1" class="kitkat_flat_collision"/>
+      <geom mesh="kitkat_flat_collision_2" class="kitkat_flat_collision"/>
+      <geom mesh="kitkat_flat_collision_3" class="kitkat_flat_collision"/>
+      <geom mesh="kitkat_flat_collision_4" class="kitkat_flat_collision"/>
+    </body>
+  </worldbody>
+</mujoco>
