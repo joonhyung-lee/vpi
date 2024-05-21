@@ -24,6 +24,9 @@
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
   <style>
     .image-row {
       display: flex; /* Use flexbox to create a row layout */
@@ -39,6 +42,25 @@
     }
     figure {
       text-align: center; /* Center the contents of the figure */
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-text {
+      margin-top: 10px;
+      text-align: center;
     }
   </style>
 
@@ -73,12 +95,9 @@
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [['\\(', '\\)']],
-        displ`ayMath: [['$$', '$$']],
-        processEscapes: true,
-      },
-      "HTML-CSS": { availableFonts: ["TeX"] },
-      showMathMenu: false,
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        processEscapes: true
+      }
     });
   </script>
 </head>
@@ -354,73 +373,29 @@
   </section>
   <!-- End of module explanations -->
 
-
-  <!-- Simulation Experimental Videos -->
-  <!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">User Interaction</h2>
-      <div id="module">
-        <div id="sim-results" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="assets/videos/sim-shelf-level1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="assets/videos/sim-shelf-level2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="assets/videos/sim-shelf-level3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-  <!-- End of simulation experimental videos -->
-
-  <!-- User Interaction Videos -->
-  <!-- <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">User Interaction</h2>
-        <div id="module">
-          <div id="sim-results">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <source src="assets/videos/user_interaction.mp4" type="video/mp4">
-            </video>
-            <h2 class="content has-text-justified" style="text-align: left;">
-              User interaction with the proposed system SPOTS. The user selects among the candidates, provided with a
-              close consideration of stability and reasonableness, in an interactive viewer. SPOTS recommends the
-              placement candidates based on the prompt of the task.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End of user interaction videos -->
-
   <!-- Environments -->
-  <section class="section" style="margin-bottom: 120px;">
-
+  <section class="section" style="margin-top: 250px; margin-bottom: 50px;">
     <div class="container">
       <h2 class="title is-3">Environments</h2>
-      <h2 class="content has-text-justified" style="text-align: left; position: absolute;">
+      <div class="columns">
+        <div class="column">
+          <img src="assets/images/fig-env-block-preference.png" alt="Block Task" style="width: 100%;">
+          <p class="has-text-centered">Block Task</p>
+        </div>
+        <div class="column">
+          <img src="assets/images/fig-env-blocks-only-preference.png" alt="Polygon Task" style="width: 100%;">
+          <p class="has-text-centered">Polygon Task</p>
+        </div>
+        <div class="column">
+          <img src="assets/images/fig-env-realworld-object.png" alt="Household Task" style="width: 100%;">
+          <p class="has-text-centered">Household Task</p>
+        </div>
+      </div>
+      <h2 class="content has-text-justified" style="text-align: left;">
         <p>
-          To validate the effectiveness of VRD, we conducted a set of experiments focusing on visual reasoning
-          performance.
-          In addition, we designed further experiments to evaluate the ability to infer human preferences, which we
-          divided into two categories: those based on semantic property and those based on spatial patterns.
-          Specifically, the performance of our proposed method is evaluated across three different environments: Block
-          Task, Polygon Task, and Household Task.
+          To validate the effectiveness of VRD, we conducted a set of experiments focusing on visual reasoning performance.
+          In addition, we designed further experiments to evaluate the ability to infer human preferences, which we divided into two categories: those based on semantic property and those based on spatial patterns.
+          Specifically, the performance of our proposed method is evaluated across three different environments: Block Task, Polygon Task, and Household Task.
         </p>
       </h2>
     </div>
@@ -556,37 +531,61 @@
   </section>
   <!-- End of Results -->
 
-
-  <!-- Real world Experimental Videos -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Real World Demonstration</h2>
-        <div id="module">
-          <div id="realworld">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="assets/videos/real_world.mp4" type="video/mp4">
-            </video>
-            <h2 class="content has-text-justified" style="text-align: left;">
-              In this experiment, we consider a scene with different objects placed on a desk.
-              We designed a task that categorizes objects based on similarity. The reasoning criteria, termed
-              <strong>similarity</strong>, varies for each experiment and serves as the ground truth for evaluating
-              reasoning abilities.
-              Each type of <strong>similarity</strong> was evaluated five times, and performance was measured using the
-              overall success rate (i.e., both Sta. S/R and Rea. S/R).
-              From this experiment, we insist that the reasonable place varies depending on the task description given
-              as input. Furthermore, we are able to accurately determine the stable positions to place the objects by
-              reconstructing the robot's ego-centric view with the real-to-sim method.
-            </h2>
+<!-- Real World Experimental Videos -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Real World Demonstration</h2>
+      <div id="module">
+        <div id="realworld" class="columns is-multiline">
+          <div class="column is-half">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop>
+                <!-- Your video file here -->
+                <source src="assets/videos/vpi-shape-fruit-beverage-12times.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-text"><span style="background-color: #e0ffe0;"> Response:</span> Rearrange the objects with <span style="color: red;">the same category</span>.</div>
+          </div>
+          <div class="column is-half">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop>
+                <!-- Your video file here -->
+                <source src="assets/videos/vpi-shape-snack-beverage-12times.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-text"><span style="background-color: #e0ffe0;"> Response:</span> Group objects by <span style="color: red;">the same shape</span>.</div>
+          </div>
+          <div class="column is-half">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop>
+                <!-- Your video file here -->
+                <source src="assets/videos/vpi-horizontal-beverage-12times.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-text"><span style="background-color: #e0ffe0;"> Response:</span> Make objects into <span style="color: blue;">a horizontal line</span>.</div>
+          </div>
+          <div class="column is-half">
+            <div class="video-container">
+              <video poster="" autoplay controls muted loop>
+                <!-- Your video file here -->
+                <source src="assets/videos/vpi-vertical-beverage-12times.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-text"><span style="background-color: #e0ffe0;"> Response:</span> Sort objects <span style="color: blue;">vertically</span>.</div>
           </div>
         </div>
+        <h2 class="content has-text-justified" style="text-align: left;">
+          We have demonstrated the effectiveness of our method in interpreting spatial relationships from image sequences and inferring preferences for both semantic and spatial patterns in real-world tabletop environments.
+        </h2>
       </div>
     </div>
-  </section>
-  <!-- End of Real world experimental videos -->
+  </div>
+</section>
+<!-- End of Real World Experimental Videos -->
 
 
+  
   <!-- Youtube video -->
   <!-- <section class="hero is-small is-light">
   <div class="hero-body">
@@ -736,6 +735,16 @@
       });
     });
   });
-</script>
+
+  // JavaScript code to display text when videos end
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.addEventListener('ended', () => {
+      const videoText = video.parentElement.querySelector('.video-text');
+      videoText.style.display = 'block';
+    });
+  });
+
+  </script>
 
 </html>
