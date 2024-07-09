@@ -1,4 +1,5 @@
-#### News
+# News
+
 We are happy to announce that **VPI** has been accepted to IROS2024! 😆🎉🎉
 
 Initial code released.
