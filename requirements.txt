@@ -1,0 +1,10 @@
+numpy
+matplotlib
+mujoco>=2.3.0
+opencv-python
+openai
+Pillow
+requests
+tenacity
+rich
+ipython
